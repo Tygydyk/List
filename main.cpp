@@ -133,7 +133,7 @@ int main(int argc, char *argv[]) {
 	List* l = 0;
 	for (int i = 1; i < argc; i++) { // Считываем аргументы
 		int value;
-		istringstream ss(argv[i]);
+		istringstream ss(argv[i]); // Превращаем строку в поток
 		ss >> value;
 		l = add(l, value); // Добавляет в список
 	}
