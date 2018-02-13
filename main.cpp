@@ -32,16 +32,6 @@ List * add(List* l, int value) { // Добавить элемент
         return l;
 }
 
-bool find(List* l, int value, int* out, int counter=0) {
-        if (l == 0)
-                return false;
-        if (l->value == value) {
-                *out = counter;
-                return true;
-        }
-        return find(l->next, value, out, counter + 1);
-}
-
 void printfind(List* l, int value, int counter = 0) { // Поиск позиций элемента
         if (l == 0) {
                 wcout << "Список пуст";
